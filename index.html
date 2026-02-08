@@ -33,7 +33,7 @@ button{
 
 <body>
 
-<h2>Karuva Mama ❤️<br>Will you be my Best Friend?</h2>
+<h2>Karuva Mama 💗<br>Will you be my Best Friend?</h2>
 
 <button id="yes" onclick="funYes()">YES</button>
 <button id="no" onclick="moveNo()">NO</button>
@@ -50,10 +50,25 @@ let messages = [
 let count = 0;
 
 function funYes(){
- let btn = document.getElementById("yes");
+  let btn = document.getElementById("yes");
 
- if(count < messages.length){
-   btn.innerText = messages[count];
-   btn.style.position = "absolute";
-   btn.style.top = Math.random()*400 + "px";
-   btn.style.left =
+  if(count < messages.length){
+    btn.innerText = messages[count];
+    btn.style.position = "absolute";
+    btn.style.top = Math.random() * 400 + "px";
+    btn.style.left = Math.random() * 300 + "px";
+    count++;
+  }else{
+    document.body.innerHTML = "<h1>Friends Forever Karuva Mama 💗🫂</h1>";
+  }
+}
+
+function moveNo(){
+  let btn = document.getElementById("no");
+  btn.style.top = Math.random() * 400 + "px";
+  btn.style.left = Math.random() * 300 + "px";
+}
+</script>
+
+</body>
+</html>
